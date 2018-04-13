@@ -50,7 +50,7 @@
             var avgReading = stationReadings.Average(x => x.Value);
             var firstOrDefault = stationReadings.FirstOrDefault();
 
-            return new StationReadingResult(firstOrDefault?.Measurement.StationReference, firstOrDefault?.Measurement.Station.Label, minReading?.Value, maxReading?.Value, minReading?.ReadingDateTime, maxReading?.ReadingDateTime, avgReading ?? null, firstOrDefault?.Measurement.UnitName);
+            return new StationReadingResult(firstOrDefault?.Measurement.StationReference, firstOrDefault?.Measurement.Station.Label, minReading?.Value, maxReading?.Value, minReading?.ReadingDateTime, maxReading?.ReadingDateTime, avgReading, firstOrDefault?.Measurement.UnitName);
         }
 
         [LogException]

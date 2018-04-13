@@ -1,10 +1,11 @@
 ﻿namespace EnvironmentData
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using Interfaces;
     using Properties;
     using Utility;
-
+    
     public class Program
     {
         private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
