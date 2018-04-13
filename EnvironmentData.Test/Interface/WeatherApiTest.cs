@@ -1,7 +1,9 @@
 ﻿namespace EnvironmentData.Test.Interface
 {
     using System.Collections.Generic;
+    using System.Linq;
     using EnvironmentData.Models;
+    using FluentAssertions;
     using Interfaces;
     using Moq;
     using NUnit.Framework;
@@ -29,6 +31,30 @@
 
             mock.Setup(m => m.GetStations("Stort")).Returns(list);
             mock.Verify();
+        }
+
+        [Test]
+        [TestCase("Stort", ExpectedResult = 5)]
+        [TestCase("Cherwell", ExpectedResult = 9)]
+        public int Test_Station_Count(string stort)
+        {
+           var weatherApiProcessor = new WeatherApiProcessor();
+           return weatherApiProcessor.GetStations(stort).Count();
+        }
+
+        [Test]
+        public void Test_Station_Count_Fail_Test()
+        {
+            var weatherApiProcessor = new WeatherApiProcessor();
+            weatherApiProcessor.GetStations("Cherwell").Count().Should().NotBe(10);
+        }
+
+        [Test]
+        public void Test_StationReadingResult()
+        {
+            var weatherApiProcessor = new WeatherApiProcessor();
+            var result = weatherApiProcessor.GetStationReadingsResult("5151TH");
+            result.StationName.Should().Be("Sawbridgeworth");
         }
     }
 }

@@ -10,7 +10,7 @@
     /// </summary>
     public class CommonHelper : ICommonHelper
     {
-        private static readonly ApiCallingUtil ApiCallingUtil;
+        private static readonly IApiCallingUtil ApiCallingUtil;
 
         /// <summary>
         /// Initialises static members of the <see cref="CommonHelper"/> class.
