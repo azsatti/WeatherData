@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EnvironmentData.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Timeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="RetryCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="GetStations" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://environment.data.gov.uk/flood-monitoring/id/stations/?riverName={0}</Value>
+    </Setting>
+    <Setting Name="GetStationReadings" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://environment.data.gov.uk/flood-monitoring/id/stations/{0}/readings?since={1}&amp;_limit=10000&amp;_sorted&amp;_view=full</Value>
+    </Setting>
+    <Setting Name="RiverName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Cherwell</Value>
+    </Setting>
+    <Setting Name="InnerException" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Inner Exception</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
