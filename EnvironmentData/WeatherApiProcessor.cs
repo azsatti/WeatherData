@@ -10,7 +10,7 @@
     using Utility;
 
     /// <summary>
-    /// implements DI and has methods which will return API data.
+    /// implements DI and has methods which will return API data. 
     /// </summary>
     public class WeatherApiProcessor : IWeatherApi
     {
@@ -21,7 +21,7 @@
         #region Constructor
         public WeatherApiProcessor()
         {
-            this._commonHelper = new CommonHelper();
+            this._commonHelper = new CommonHelper(); //// auto-faq or structure map could be used instead but with limited time skipping it.
         }
         #endregion
 

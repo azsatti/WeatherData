@@ -17,7 +17,7 @@
         /// </summary>
         static CommonHelper()
         {
-            ApiCallingUtil = new ApiCallingUtil();
+            ApiCallingUtil = new ApiCallingUtil(); //// auto-faq or structure map could be used instead but with limited time skipping it.
         }
 
         public IEnumerable<T> GetList<T>(string url)

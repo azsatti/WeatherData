@@ -18,6 +18,7 @@ EnvironmentData project uses following nugget packages:
 EnvironmentData.Test project uses following nugget packages:
 
 <package id="Castle.Core" version="4.2.1" targetFramework="net452" />
+<package id="FluentAssertions" version="5.2.0" targetFramework="net452" />
 <package id="log4net" version="2.0.8" targetFramework="net452" />
 <package id="Moq" version="4.8.2" targetFramework="net452" />
 <package id="Newtonsoft.Json" version="11.0.2" targetFramework="net452" />
