@@ -36,6 +36,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.7.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.7.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ConsoleTables, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConsoleTables.2.2.0\lib\net40\ConsoleTables.dll</HintPath>
       <Private>True</Private>
@@ -65,6 +69,7 @@
     <Compile Include="Interfaces\ICommonHelper.cs" />
     <Compile Include="Interfaces\IPrintHelper.cs" />
     <Compile Include="Interfaces\IWeatherApi.cs" />
+    <Compile Include="Interfaces\IWeatherService.cs" />
     <Compile Include="PostSharp\CachingAttribute.cs" />
     <Compile Include="PostSharp\LogExceptionAttribute.cs" />
     <Compile Include="PostSharp\PostsharpExceptionHandler.cs" />
@@ -88,6 +93,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WeatherApiProcessor.cs" />
+    <Compile Include="WeatherService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

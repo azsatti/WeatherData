@@ -7,13 +7,14 @@ The solution contains following two projects:
 
 EnvironmentData project uses following nugget packages:
 
-<package id="ConsoleTables" version="2.2.0" targetFramework="net452" />
-<package id="log4net" version="2.0.8" targetFramework="net452" />
-<package id="Newtonsoft.Json" version="11.0.2" targetFramework="net452" />
-<package id="PostSharp" version="5.0.49" targetFramework="net452" developmentDependency="true" />
-<package id="PostSharp.Redist" version="5.0.49" targetFramework="net452" />
-<package id="StyleCop.Error.MSBuild" version="1.0.0" targetFramework="net452" />
-<package id="StyleCop.MSBuild" version="5.0.0" targetFramework="net452" developmentDependency="true" />
+<package id="Autofac" version="4.7.0" targetFramework="net452" />
+ <package id="ConsoleTables" version="2.2.0" targetFramework="net452" />
+ <package id="log4net" version="2.0.8" targetFramework="net452" />
+ <package id="Newtonsoft.Json" version="11.0.2" targetFramework="net452" />
+ <package id="PostSharp" version="5.0.49" targetFramework="net452" developmentDependency="true" />
+ <package id="PostSharp.Redist" version="5.0.49" targetFramework="net452" />
+ <package id="StyleCop.Error.MSBuild" version="1.0.0" targetFramework="net452" />
+ <package id="StyleCop.MSBuild" version="5.0.0" targetFramework="net452" developmentDependency="true" />
 
 EnvironmentData.Test project uses following nugget packages:
 
