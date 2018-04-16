@@ -4,7 +4,7 @@
     using System.Net;
 
     /// <summary>
-    /// A version of web client with a timeout property.
+    /// A version of web client with a timeout property. We can use make use of async methods if needed, but due to time constraint I am not doing so.
     /// </summary>
     public class WebClientWithTimeout : WebClient
     {

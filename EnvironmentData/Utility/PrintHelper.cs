@@ -20,5 +20,15 @@
             table.Write(Format.Minimal);
             Console.WriteLine(Environment.NewLine);
         }
+
+        public void Print(string message, bool newLineAfter)
+        {
+            Console.WriteLine(message);
+
+            if (newLineAfter)
+            {
+                Console.WriteLine(Environment.NewLine);
+            }
+        }
     }
 }

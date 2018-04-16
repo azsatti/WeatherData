@@ -1,7 +1,6 @@
 ﻿namespace EnvironmentData
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
     using Interfaces;
     using Properties;
     using Utility;
@@ -13,15 +12,15 @@
 
         public static void Main(string[] args)
         {
-            LoggingInitializer();
-            Log.Info("Starting program");
+            LoggingHelper.Initialize();
+            PrintHelper.Print($"---River --- {Settings.Default.RiverName}--- ", true);
+            CallWeatherApi();
+            PrintHelper.Print("Press enter to close...", false);
+            Console.ReadLine();
+        }
 
-            Console.WriteLine("------------------------------------------------------------- ");
-            Console.WriteLine($"---------------------River ------ {Settings.Default.RiverName}-------------- ------- ");
-            Console.WriteLine("------------------------------------------------------------- ");
-
-            Console.WriteLine(Environment.NewLine);
-
+        private static void CallWeatherApi()
+        {
             try
             {
                 var weatherApi = new WeatherApiProcessor();
@@ -35,18 +34,8 @@
             catch (Exception e)
             {
                 Log.Error(e.Message); // Log the error
-                Console.WriteLine("Something went wrong, please check logs");
+                PrintHelper.Print("Something went wrong, please check logs", false);
             }
-
-            Log.Info("Ending program");
-
-            Console.WriteLine("Press enter to close...");
-            Console.ReadLine();
-        }
-
-        private static void LoggingInitializer()
-        {
-            log4net.Config.XmlConfigurator.Configure();
         }
     }
 }

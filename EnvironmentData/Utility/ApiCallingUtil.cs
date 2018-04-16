@@ -48,7 +48,7 @@
             {
                 client.Proxy = new WebProxy { BypassList = new[] { url } };
 
-                downloadString = client.DownloadString(url);
+                downloadString = client.DownloadString(url); // We can call async version however due to time constraint I am not doing it.
             }
 
             return downloadString;
