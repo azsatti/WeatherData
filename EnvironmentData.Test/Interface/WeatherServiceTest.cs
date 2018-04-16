@@ -9,7 +9,7 @@
     using NUnit.Framework;
 
     [TestFixture]
-    public class WeatherApiTest
+    public class WeatherServiceTest
     {
         [Test]
         public void Test()
@@ -25,7 +25,7 @@
                 }
             };
 
-            var mock = new Mock<IWeatherApi>();
+            var mock = new Mock<IWeatherService>();
             mock.Setup(m => m.GetStations("Stort")).Returns(It.IsAny<IEnumerable<Station>>());
             mock.Verify();
 
@@ -38,21 +38,21 @@
         [TestCase("Cherwell", ExpectedResult = 9)]
         public int Test_Station_Count(string stort)
         {
-           var weatherApiProcessor = new WeatherApiProcessor();
+           var weatherApiProcessor = new WeatherService();
            return weatherApiProcessor.GetStations(stort).Count();
         }
 
         [Test]
         public void Test_Station_Count_Fail_Test()
         {
-            var weatherApiProcessor = new WeatherApiProcessor();
+            var weatherApiProcessor = new WeatherService();
             weatherApiProcessor.GetStations("Cherwell").Count().Should().NotBe(10);
         }
 
         [Test]
         public void Test_StationReadingResult()
         {
-            var weatherApiProcessor = new WeatherApiProcessor();
+            var weatherApiProcessor = new WeatherService();
             var result = weatherApiProcessor.GetStationReadingsResult("5151TH");
             result.StationName.Should().Be("Sawbridgeworth");
         }

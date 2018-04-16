@@ -68,7 +68,6 @@
   <ItemGroup>
     <Compile Include="Interfaces\ICommonHelper.cs" />
     <Compile Include="Interfaces\IPrintHelper.cs" />
-    <Compile Include="Interfaces\IWeatherApi.cs" />
     <Compile Include="Interfaces\IWeatherService.cs" />
     <Compile Include="PostSharp\CachingAttribute.cs" />
     <Compile Include="PostSharp\LogExceptionAttribute.cs" />
@@ -92,7 +91,6 @@
     <Compile Include="Utility\WebClientWithTimeout.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WeatherApiProcessor.cs" />
     <Compile Include="WeatherService.cs" />
   </ItemGroup>
   <ItemGroup>

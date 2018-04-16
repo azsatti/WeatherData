@@ -77,7 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\WeatherApiTest.cs" />
+    <Compile Include="Interface\WeatherServiceTest.cs" />
     <Compile Include="Models\StationTest.cs" />
     <Compile Include="PostSharp\LogExceptionAttributeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
